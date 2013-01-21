@@ -198,7 +198,7 @@ module ActiveRecord
     SQLITE_ADAPTER_PARENT = USE_ARJDBC_WORKAROUND ? JdbcAdapter : SQLiteAdapter
     POSTGRE_ADAPTER_PARENT = USE_ARJDBC_WORKAROUND ? JdbcAdapter : AbstractAdapter
 
-    class MysqlAdapter < MYSQL_ADAPTER_PARENT
+    class MysqlAdapter < AbstractAdapter
       include ::DatabaseCleaner::ActiveRecord::MysqlAdapter
     end
 
